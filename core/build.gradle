@@ -1,0 +1,46 @@
+apply plugin: 'io.objectbox'
+
+android {
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "LIFE_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "LIFE_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+        }
+    }
+}
+
+
+// base的定位是基础业务模块：每一个业务模块都会依赖此模块
+dependencies {
+    ////////////////// mvp框架依赖 //////////////////
+    api rootProject.ext.dependencies["mvparms"]
+    ////////////////// android libs //////////////////
+    api rootProject.ext.dependencies["appcompa_x"]
+    api rootProject.ext.dependencies["constraintlayout_x"]
+    api rootProject.ext.dependencies["design_x"]
+    implementation rootProject.ext.dependencies["multidex_x"]
+//    api rootProject.ext.dependencies["component"]
+    ////////////////// 其他三方框架 ///////////////////
+    api rootProject.ext.dependencies["arouter"]
+    api rootProject.ext.dependencies["timber"]
+    // Arms 核心库不再包含 Glide, 想使用其他图片加载框架或者想自行扩展 ImageLoaderStrategy 就不要依赖 arms-imageloader-glide
+    // 依赖 arms-imageloader-glide 后还需要在 GlobalConfiguration 中手动注册 GlideImageLoaderStrategy
+    api rootProject.ext.dependencies["imageloader"]
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["glide-loader-okhttp3"]
+    // 现在已经将屏幕适配框架从 AndroidAutoLayout 替换为 AndroidAutoSize, AndroidAutoLayout 和 AndroidAutoSize 可以在项目中共存
+    // 所以旧项目只要依赖 arms-autolayout 即可兼容之前的旧页面, 新页面可以使用 AndroidAutoSize 进行适配, 等有时间了再将旧页面全部替换为 AndroidAutoSize
+    api rootProject.ext.dependencies["autosize"]
+    // 使retrofit支持多url切换：https://github.com/JessYanCoding/RetrofitUrlManager
+    api rootProject.ext.dependencies["retrofit-url-manager"]
+    api rootProject.ext.dependencies["leak-canary"]
+    ////////////////// processors //////////////////
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+}

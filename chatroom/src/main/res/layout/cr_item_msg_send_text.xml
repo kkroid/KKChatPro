@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:gravity="end"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btn_resend"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/padding_tiny"
+        android:background="@drawable/cr_send_message_failed"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/icon_sending"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/padding_tiny"
+        android:contentDescription="@null"
+        android:src="@drawable/cr_sending_img" />
+
+    <TextView
+        android:id="@+id/text_receipt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/padding_tiny"
+        android:text="已读"
+        android:textSize="@dimen/norm_text_size_one" />
+
+    <TextView
+        android:id="@+id/msg_content"
+        style="@style/cr_MessageText"
+        android:layout_marginEnd="@dimen/padding_horz"
+        android:background="@drawable/cr_msg_send_bg" />
+
+</LinearLayout>

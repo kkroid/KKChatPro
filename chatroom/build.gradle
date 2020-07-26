@@ -1,0 +1,8 @@
+android {
+    resourcePrefix "cr_" // 给 Module 内的资源名增加前缀, 避免资源名冲突, 建议使用 Module 名作为前缀
+}
+
+dependencies {
+    // 里面申明了很多权限，已经同步放到manifest中，避免不使用这个库之后造成权限丢失问题
+    api 'cn.jiguang.imui:chatinput:0.10.0'
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/cr_MessageLayout">
+
+    <TextView
+        android:id="@+id/send_time"
+        style="@style/cr_MessageTime" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            style="@style/cr_MessageAvatar"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@null" />
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/avatar">
+
+            <ViewStub
+                android:id="@+id/msg_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KK</string>
+
+    <!--  SuperSwipeRefreshLayout  -->
+    <string name="footer_preload">上拉加载更多</string>
+    <string name="footer_prepared">松开加载更多</string>
+    <string name="header_preload">下拉刷新</string>
+    <string name="header_prepared">松开刷新</string>
+    <string name="header_footer_loading">加载中…</string>
+    <string name="txt_loading">加载中…</string>
+</resources>

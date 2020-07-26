@@ -1,0 +1,42 @@
+// https://github.com/checkstyle/checkstyle
+// https://docs.gradle.org/current/userguide/checkstyle_plugin.html
+apply plugin: 'checkstyle'
+
+checkstyle {
+    configFile rootProject.file('config/checkstyle.xml')
+
+    // Whether or not to allow the build to continue if there are warnings.
+    ignoreFailures false
+
+    // Whether or not rule violations are to be displayed on the console.
+    showViolations true
+
+    toolVersion "8.33"
+}
+
+task checkstyle(type: Checkstyle) {
+    configFile rootProject.file('config/checkstyle.xml')
+
+    ignoreFailures false
+    showViolations true
+
+    source 'src/main/java'
+    include '**/*.java'
+    // exclude '**/gen/**'
+    // exclude '**/R.java'
+    // exclude '**/BuildConfig.java'
+
+    exclude '**/mvp/model/entity/**'
+
+    // empty classpath
+    classpath = files()
+}
+
+afterEvaluate {
+    preBuild.dependsOn('checkstyle')    // do checkstyle before building
+    assemble.dependsOn('lint')          // do lint when assemble
+    check.dependsOn('checkstyle')       // do checkstyle when run command "gradlew check"
+    // if (project.tasks.getByName("check")) {
+    //     check.dependsOn('checkstyle')
+    // }
+}

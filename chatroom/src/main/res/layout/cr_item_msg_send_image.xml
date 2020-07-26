@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/cr_MessageLayout">
+
+    <TextView
+        android:id="@+id/send_time"
+        style="@style/cr_MessageTime" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            style="@style/cr_MessageAvatar" />
+
+        <FrameLayout
+            android:id="@+id/jmui_msg_fl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@id/avatar"
+            android:background="@drawable/cr_msg_send_bg"
+            android:maxWidth="200.0dip">
+
+            <ImageView
+                android:id="@+id/jmui_picture_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop" />
+
+
+            <TextView
+                android:id="@+id/jmui_progress_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0%"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text_receipt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="7dp"
+            android:layout_toStartOf="@id/jmui_msg_fl"
+            android:text="未读消息"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/icon_sending"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@id/jmui_msg_fl"
+            android:src="@drawable/cr_sending_img"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btn_resend"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/jmui_msg_fl"
+            android:background="@drawable/cr_send_message_failed"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

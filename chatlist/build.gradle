@@ -1,0 +1,7 @@
+android {
+    resourcePrefix "cl_"
+}
+
+dependencies {
+    implementation project(':core')
+}

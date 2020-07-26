@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/cr_MessageLayout">
+
+    <TextView
+        android:id="@+id/send_time"
+        style="@style/cr_MessageTime" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            style="@style/cr_MessageAvatar" />
+
+        <TextView
+            android:id="@+id/display_name"
+            style="@style/cr_MessageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/avatar" />
+
+        <FrameLayout
+            android:id="@+id/jmui_voice_fl"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/display_name"
+            android:layout_toEndOf="@id/avatar"
+            android:gravity="start">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/msg_content"
+                    style="@style/cr_MessageContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/cr_receive_msg_normal"
+                    android:maxWidth="220dp" />
+
+                <ImageView
+                    android:id="@+id/jmui_voice_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@null"
+                    android:background="@drawable/cr_msg_voice_receive" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/jmui_voice_length_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="14dp"
+                android:textColor="#555555"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/jmui_read_status_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display_name"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@id/jmui_voice_fl"
+            android:background="@drawable/cr_msg_voice_unread"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

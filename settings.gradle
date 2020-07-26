@@ -1,0 +1,6 @@
+include ':chatlist'
+include ':imsdk'
+include ':core'
+include ':app'
+rootProject.name = "KKChatPro"
+include ':chatroom'

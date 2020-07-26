@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
+
+    <ImageView
+        android:id="@+id/avatar"
+        style="@style/cr_MessageAvatar" />
+
+    <TextView
+        android:id="@+id/display_name"
+        style="@style/cr_MessageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/avatar" />
+
+    <FrameLayout
+        android:id="@+id/jmui_layout_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/display_name"
+        android:layout_marginStart="3dp"
+        android:layout_toEndOf="@id/avatar"
+        android:background="@drawable/cr_receive_msg_normal"
+        android:orientation="vertical"
+        android:paddingStart="9dp"
+        android:paddingEnd="3dp"
+        android:paddingBottom="3dp">
+
+
+        <ImageView
+            android:id="@+id/jmui_picture_iv"
+            android:layout_width="163dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/cr_msg_location_default" />
+
+        <View
+            android:id="@+id/location_view"
+            android:layout_width="163dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:alpha="0.6"
+            android:background="#000000"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/jmui_loc_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:ellipsize="end"
+            android:ems="10"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kk.imsdk">
+
+    <application>
+        <!-- Arms 配置 Start-->
+        <meta-data
+            android:name="com.kk.imsdk.app.ImsdkConfiguration"
+            android:value="ConfigModule" />
+        <!-- Arms 配置 End-->
+    </application>
+</manifest>

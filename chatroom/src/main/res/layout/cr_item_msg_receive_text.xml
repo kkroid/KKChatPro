@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/padding_small"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/display_name"
+        style="@style/cr_MessageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/msg_content"
+        style="@style/cr_MessageText"
+        android:layout_marginStart="@dimen/padding_horz"
+        android:background="@drawable/cr_msg_receive_bg" />
+</LinearLayout>

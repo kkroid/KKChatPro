@@ -1,0 +1,4 @@
+dependencies {
+    implementation project(':core')
+    implementation 'com.tencent.imsdk:imsdk:4.6.1'
+}

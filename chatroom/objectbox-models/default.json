@@ -1,0 +1,77 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7309547571331000429",
+      "lastPropertyId": "10:6106710622598306524",
+      "name": "MessageItem",
+      "properties": [
+        {
+          "id": "2:1292010732009723112",
+          "name": "msgId",
+          "type": 9
+        },
+        {
+          "id": "3:5963975287935374901",
+          "name": "text",
+          "type": 9
+        },
+        {
+          "id": "4:1003475145791585561",
+          "name": "sender",
+          "type": 9
+        },
+        {
+          "id": "5:5326333187458320278",
+          "name": "sendTo",
+          "type": 9
+        },
+        {
+          "id": "6:4817877699676981529",
+          "name": "time",
+          "type": 6,
+          "flags": 4
+        },
+        {
+          "id": "7:7565797057534350524",
+          "name": "type",
+          "type": 5,
+          "flags": 2
+        },
+        {
+          "id": "8:437757493990899925",
+          "name": "status",
+          "type": 5,
+          "flags": 2
+        },
+        {
+          "id": "9:5511018570597338902",
+          "name": "extra",
+          "type": 9
+        },
+        {
+          "id": "10:6106710622598306524",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:7309547571331000429",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    1621064743230942286
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

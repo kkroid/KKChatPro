@@ -1,0 +1,16 @@
+android {
+    defaultConfig {
+        applicationId "com.kk.chatpro"
+    }
+}
+
+// app module的定位是一个壳工程:会包含其他所有的业务模块
+dependencies {
+    // 不独立运行才加入，runtimeOnly目的是使业务module和app module隔离
+    if (!isBuildModule.toBoolean()) {
+        implementation project(':imsdk')
+        implementation project(':chatlist')
+        implementation project(':chatroom')
+    }
+    implementation rootProject.ext.dependencies["design_x"]
+}

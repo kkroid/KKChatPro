@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5E6FD7</color>
+    <color name="colorPrimaryDark">#5E6FD7</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="norm_heading">#3C3C43</color>              <!-- 主标题 -->
+    <color name="norm_subheading">#9398AE</color>           <!-- 副标题 -->
+    <color name="norm_title">#CC3C3C43</color>              <!-- 小标题（80%） -->
+    <color name="norm_text">#3C3C43</color>                 <!-- 正文 -->
+    <color name="norm_assist_text">#993C3C43</color>        <!-- 辅助文字/小标题（60%） -->
+    <color name="norm_prompt">#663C3C43</color>             <!-- 提示文字（40%） -->
+    <color name="norm_hint">#3C3C3C43</color>               <!-- 弱提示文字（30%） -->
+</resources>
